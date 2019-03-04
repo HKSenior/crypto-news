@@ -25,7 +25,8 @@ def index(request):
 def prices(request):
     if request.method == 'POST':
         # Get form data
-        quote = request.POST['quote'].upper()        
+        quote = request.POST['quote'].upper()
+        quote = quote.replace(" ", "")
 
         # Get currency data
         crypto_request = requests.get(

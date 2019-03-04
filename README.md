@@ -5,8 +5,34 @@
 ###### News Page
 ![News Page](https://i.imgur.com/vJIfdui.png)
 
+###### Prices Page
+![Prices Page](https://i.imgur.com/ls8Q6hN.png)
+
 ## URL
 In the process of deploying via Digital Ocean
+
+# Setting up Development Environment
+## Creating Virtual Environment
+> mkdir -p prj && cd prg
+> git clone https://github.com/HKSenior/crypto-news.git
+> virtualenv ./venv
+> source venv/bin/activate
+> pip install -r requirements.txt
+
+###### To exit the Virtual Environment
+> deactivate
+
+## Starting Workers and the Beat (Celery)
+> celery -A {your project} worker -l info -B
+
+This method of starting the workers and beat is solely for development
+purposes. In production, daemonization is the prefered solution.
+
+## Collecting static files
+> python manage.py collectstatic
+
+## Start server
+> python manage.py runserver
 
 ## Setting up .env config file
 ###### Django Configuration

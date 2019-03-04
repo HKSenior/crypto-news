@@ -1,0 +1,52 @@
+{% load range %}
+
+{% if news %}
+    <div class="container-fluid">
+        {# Card Columns #}
+        <div class="card-deck">
+            {% for item in news %}                
+                {% with forloop.counter0 as index %}
+                    {% if index != 0 and index != 1 %}                        
+                        {% if index|divisibleby:2 %}
+                            <div class="w-100 d-none d-sm-block d-md-none"></div>
+                        {% endif %}
+
+                        {% if index|divisibleby:3 %}
+                            <div class="w-100 d-none d-md-block d-lg-none"></div>
+                        {% endif %}
+
+                        {% if index|divisibleby:4 %}
+                            <div class="w-100 d-none d-lg-block d-xl-none"></div>
+                        {% endif %}
+                        
+                        {% if index|divisibleby:5 %}
+                            <div class="w-100 d-none d-xl-block"></div>          
+                        {% endif %}                 
+                    {% endif %}
+                {% endwith %}
+
+                {# Card #}
+                <div class="card card-profile shadow mb-4">
+                    {# Card Image #}
+                    <div class="text-center">
+                        <img src="{{ item.imageurl }}" class="card-img-top shadow-lg w-75 mt-4" alt="{{ item.source }}">
+                    </div>                                            
+
+                    {# Card Body #}
+                    <div class="card-body mt-4">
+                        <h5 class="card-text text-center">{{ item.title }}</h5>                
+                    </div>
+                    
+                    {# Card Footer #}
+                    <div class="card-footer">
+                        <div class="text-center">
+                            <a href="{{ item.url }}" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                {# End of Card #}
+            {% endfor %}            
+        </div>
+        {# End of Card Columns #}
+    </div>
+{% endif %}

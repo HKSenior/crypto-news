@@ -1,9 +1,9 @@
 # Crypto Currency News Site
 ###### Home Page
-![Home Page](https://imgur.com/LdPzVGU)
+![Home Page](https://i.imgur.com/LdPzVGU.png)
 
 ###### News Page
-![News Page](https://imgur.com/vJIfdui)
+![News Page](https://i.imgur.com/vJIfdui.png)
 
 ## URL
 In the process of deploying via Digital Ocean

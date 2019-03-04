@@ -13,28 +13,38 @@ In the process of deploying via Digital Ocean
 
 # Setting up Development Environment
 ## Creating Virtual Environment
-> mkdir -p prj && cd prg
-> git clone https://github.com/HKSenior/crypto-news.git
-> virtualenv ./venv
-> source venv/bin/activate
-> pip install -r requirements.txt
+```python
+mkdir -p prj && cd prg
+git clone https://github.com/HKSenior/crypto-news.git
+virtualenv ./venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
 ###### To exit the Virtual Environment
-> deactivate
+```python
+deactivate
+```
 
 ## Starting Workers and the Beat (Celery)
-> celery -A {your project} worker -l info -B
+```python
+celery -A {your project} worker -l info -B
+```
 
 This method of starting the workers and beat is solely for development
 purposes. In production, daemonization is the prefered solution.
 
 ## Collecting static files
-> python manage.py collectstatic
+```python
+python manage.py collectstatic
+```
 
 ## Start server
-> python manage.py runserver
+```python
+python manage.py runserver
+```
 
-## Setting up .env config file
+# Setting up .env config file
 ###### Django Configuration
 - SECRET_KEY
 - ALLOWED_HOSTS

@@ -13,7 +13,7 @@ In the process of deploying via Digital Ocean
 
 # Setting up Development Environment
 ## Creating Virtual Environment
-```python
+```
 mkdir -p prj && cd prg
 git clone https://github.com/HKSenior/crypto-news.git
 virtualenv ./venv
@@ -22,12 +22,12 @@ pip install -r requirements.txt
 ```
 
 ###### To exit the Virtual Environment
-```python
+```
 deactivate
 ```
 
 ## Starting Workers and the Beat (Celery)
-```python
+```
 celery -A {your project} worker -l info -B
 ```
 
@@ -35,12 +35,12 @@ This method of starting the workers and beat is solely for development
 purposes. In production, daemonization is the prefered solution.
 
 ## Collecting static files
-```python
+```
 python manage.py collectstatic
 ```
 
-## Start server
-```python
+## Starting the server
+```
 python manage.py runserver
 ```
 

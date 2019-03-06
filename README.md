@@ -3,7 +3,7 @@
 ![Home Page](https://i.imgur.com/LdPzVGU.png)
 
 ###### News Page
-![News Page](https://i.imgur.com/vJIfdui.png)
+![News Page](https://i.imgur.com/5WesVsL.png)
 
 ###### Prices Page
 ![Prices Page](https://i.imgur.com/ls8Q6hN.png)

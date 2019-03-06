@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <!-- Jumbotron -->
-    <div class="container-fluid d-inline-flex justify-content-center mt-5 mb-3">    
-        <div class="jumbotron w-50 text-center">
-            <h1 class="display-4">Welcome to Crypto News</h1>
+    <header>
+        <!-- Banner -->
+        <div class="text-light text-md-right text-center banner">
+            <h1 class="display-4 banner-heading">Welcome to Crypto News</h1>
             <p class="lead">Up To The Minute Crypto Currency and Blockchain News</p>
         </div>
-    </div>
-    <!-- End of Jumbotron -->
+        <!-- End of Banner -->
+    </header>
 
-    <!-- Price Data -->
-    {% include 'partials/_price_table.html' %}
+    <!-- Price Data -->    
+    {% include 'partials/_price_table.html' %}    
     <!-- End of Price Data -->
 
     <!-- Card Container -->

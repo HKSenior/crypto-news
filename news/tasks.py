@@ -53,7 +53,7 @@ def update_news():
                 "VALUES ($news_id, '$imageurl', "
                 "'$source', '$url', $title, '$categories', "
                 "TIMESTAMP '$when_added');"
-            )            
+            )
 
             # Add the new articles
             for item in data['Data']:
@@ -66,10 +66,12 @@ def update_news():
                         url=item['url'],
                         title='$$' + item['title'] + '$$',
                         categories=item['categories'],
-                        when_added=datetime.now(tz=timezone('US/Eastern'))
+                        when_added=datetime.now(
+                            tz=timezone(config('CELERY_TIMEZONE'))
+                        )
                     )
                     cursor.execute(query)
-                    connection.commit()                    
+                    connection.commit()
 
     except (Exception, psycopg2.Error) as error:
         print("Error while connecting to PostgreSQL\n\t", error)

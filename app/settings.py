@@ -1,5 +1,7 @@
 import os
+from datetime import datetime
 
+from pytz import timezone
 from decouple import config, Csv
 from celery.schedules import crontab
 
@@ -135,6 +137,6 @@ CELERY_TIMEZONE = config('CELERY_TIMEZONE')
 CELERY_BEAT_SCHEDULE = {
     'update_news': {
         'task': 'news.tasks.update_news',
-        'schedule': 120,
+        'schedule': 160,
     }
 }

@@ -4,8 +4,10 @@ from celery import shared_task
 import psycopg2
 import requests
 import json
+from pytz import timezone
 from string import Template
 from decouple import config
+from datetime import datetime
 
 
 @shared_task()
@@ -47,10 +49,11 @@ def update_news():
             template = Template(
                 "INSERT INTO $table "
                 "(news_id, imageurl, source, "
-                "url, title, categories) "
+                "url, title, categories, when_added) "
                 "VALUES ($news_id, '$imageurl', "
-                "'$source', '$url', $title, '$categories');"
-            )
+                "'$source', '$url', $title, '$categories', "
+                "TIMESTAMP '$when_added');"
+            )            
 
             # Add the new articles
             for item in data['Data']:
@@ -62,7 +65,8 @@ def update_news():
                         source=item['source'],
                         url=item['url'],
                         title='$$' + item['title'] + '$$',
-                        categories=item['categories']
+                        categories=item['categories'],
+                        when_added=datetime.now(tz=timezone('US/Eastern'))
                     )
                     cursor.execute(query)
                     connection.commit()                    

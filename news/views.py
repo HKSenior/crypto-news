@@ -5,7 +5,7 @@ from . models import News
 
 def news(request):
     # Get articles from db
-    records = News.objects.all()
+    records = News.objects.all().order_by('-news_id')
 
     context = {                
         'news': list(records)

@@ -65,10 +65,9 @@ python manage.py runserver
 - CELERY_RESULT_SERIALIZER
 
 ## Future Upgrades
-- [x] Use Celery to auto update database with new articles
+- [X] Use Celery to auto update database with new articles
 - [ ] Add pagination to the home page news cards
 - [ ] Allow users to sort news cards by date on news page
 - [ ] Allow users to filter news cards by category
-- [ ] Style news cards
-- [ ] Style nav bar
+- [X] Style news cards
 - [ ] Add charts to price page

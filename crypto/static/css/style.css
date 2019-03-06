@@ -1,4 +1,10 @@
-/* Index */
+/* Cards */
+.card-img-block {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+    top: -25px;
+}
 
 /* Prices */
 .jumbo-img {

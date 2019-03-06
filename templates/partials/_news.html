@@ -26,22 +26,25 @@
                 {% endwith %}
 
                 {# Card #}
-                <div class="card card-profile shadow mb-4">
+                <div class="card shadow my-5">
                     {# Card Image #}
-                    <div class="text-center">
-                        <img src="{{ item.imageurl }}" class="card-img-top shadow-lg w-75 mt-4" alt="{{ item.source }}">
+                    <div class="card-img-block">
+                        <img src="{{ item.imageurl }}" class="card-img-top shadow-lg rounded" alt="{{ item.source }}">
                     </div>                                            
 
                     {# Card Body #}
-                    <div class="card-body mt-4">
-                        <h5 class="card-text text-center">{{ item.title }}</h5>                
+                    <div class="card-body">
+                        <h5 class="card-text text-center mb-3">{{ item.title }}</h5>
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-outline-success">Read More</button>     
+                        </div>                                                         
                     </div>
                     
                     {# Card Footer #}
                     <div class="card-footer">
-                        <div class="text-center">
-                            <a href="{{ item.url }}" class="btn btn-primary">Read More</a>
-                        </div>
+                        <p class="card-text text-center">
+                            <small class="text-muted">Posted {{ item.when_added | timesince }} ago</small>
+                        </p>
                     </div>
                 </div>
                 {# End of Card #}

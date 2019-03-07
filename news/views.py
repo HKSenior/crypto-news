@@ -7,7 +7,7 @@ def news(request):
     # Get articles from db
     records = News.objects.all().order_by('-news_id')
 
-    context = {                
+    context = {
         'news': list(records)
     }
     return render(request, 'pages/news.html', context)

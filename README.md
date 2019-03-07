@@ -1,6 +1,6 @@
 # Crypto Currency News Site
 ###### Home Page
-![Home Page](https://i.imgur.com/LdPzVGU.png)
+![Home Page](https://i.imgur.com/DMICJcQ.jpg)
 
 ###### News Page
 ![News Page](https://i.imgur.com/5WesVsL.png)

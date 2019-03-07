@@ -13,11 +13,11 @@ def index(request):
     )
 
     # Get articles from db
-    records = News.objects.all().order_by('-news_id')[:25]
+    records = list(News.objects.all().order_by('-news_id')[:25])
 
     context = {        
         'price': json.loads(price_request.content),
-        'news': list(records)
+        'news': records
     }
     return render(request, 'pages/index.html', context)
 

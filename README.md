@@ -3,7 +3,8 @@
 ![Home Page](https://i.imgur.com/DMICJcQ.jpg)
 
 ## URL
-In the process of deploying via Digital Ocean
+The IP address is <http://142.93.50.197/>
+I am currently in the process of purchasing a domain name.
 
 # Setting up Development Environment
 ## Creating Virtual Environment

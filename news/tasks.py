@@ -27,7 +27,7 @@ def update_news():
         data_requests = requests.get(
             "https://min-api.cryptocompare.com/data/v2/news/?lang=EN"
         )
-        data = json.loads(data_requests.content)
+        data = json.loads(data_requests.content)        
 
         # Get the latest news articles id from the db
         template = Template("SELECT news_id "

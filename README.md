@@ -1,12 +1,6 @@
 # Crypto Currency News Site
-###### Home Page
+### Home Page
 ![Home Page](https://i.imgur.com/DMICJcQ.jpg)
-
-###### News Page
-![News Page](https://i.imgur.com/5WesVsL.png)
-
-###### Prices Page
-![Prices Page](https://i.imgur.com/ls8Q6hN.png)
 
 ## URL
 In the process of deploying via Digital Ocean

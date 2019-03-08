@@ -3,8 +3,7 @@
 ![Home Page](https://i.imgur.com/DMICJcQ.jpg)
 
 ## URL
-The IP address is <http://142.93.50.197/>
-I am currently in the process of purchasing a domain name.
+<https://www.hassani-cryptonews.com>
 
 # Setting up Development Environment
 ## Creating Virtual Environment

@@ -67,7 +67,7 @@ def update_news():
                         title='$$' + item['title'] + '$$',
                         categories=item['categories'],
                         when_added=datetime.now(
-                            tz=timezone(config('CELERY_TIMEZONE'))
+                            tz=timezone(config('TIME_ZONE'))
                         )
                     )
                     cursor.execute(query)

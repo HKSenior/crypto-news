@@ -1,8 +1,8 @@
 from datetime import datetime
 
-from django.shortcuts import render
-from decouple import config
 from pytz import timezone
+from decouple import config
+from django.shortcuts import render
 
 from . models import News
 
@@ -13,7 +13,8 @@ def news(request):
 
     context = {
         'news': list(records),
-        'now': datetime.now(tz=timezone(config('CELERY_TIMEZONE')))
+        'now': datetime.now(tz=timezone(config['CELERY_TIMEZONE'])),
+        'hello': 'Hello, World!!!'
     }
 
     print(context)

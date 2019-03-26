@@ -1,4 +1,4 @@
-{% load range %}
+{% load tags %}
 
 {% if news %}
     <section class="bg-light">
@@ -34,7 +34,7 @@
                     {% endwith %}
 
                     {# Card #}
-                    <div class="card shadow my-5">
+                    <div class="card shadow my-5" style="width: 15rem;">
                         {# Card Image #}
                         <div class="card-img-block">
                             <img src="{{ item.imageurl }}" class="card-img-top shadow-lg rounded" alt="{{ item.source }}">
@@ -44,14 +44,14 @@
                         <div class="card-body">
                             <h5 class="card-text text-center mb-3">{{ item.title }}</h5>
                             <div class="text-center mt-3">
-                                <a class="btn btn-info" href="{{ item.url }}">Read More</a>                                    
+                                <a class="btn btn-info" href="{{ item.url }}">Read More</a>               
                             </div>                                                         
                         </div>
                         
                         {# Card Footer #}
                         <div class="card-footer">
-                            <p class="card-text text-center">
-                                <small class="text-dark">Posted {{ item.when_added | timesince }} ago</small>
+                            <p class="card-text text-center">                                
+                                <small class="text-dark">Posted {{ item.when_added|howlong }} ago</small>                                
                             </p>
                         </div>
                     </div>

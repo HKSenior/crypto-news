@@ -4,10 +4,10 @@ from celery import shared_task
 import psycopg2
 import requests
 import json
+from pytz import timezone
 from string import Template
 from decouple import config
 from datetime import datetime
-from django.utils import timezone
 
 
 @shared_task()
@@ -66,7 +66,10 @@ def update_news():
                         url=item['url'],
                         title='$$' + item['title'] + '$$',
                         categories=item['categories'],
-                        when_added=datetime.now(tz=timezone.now()))
+                        when_added=datetime.now(
+                            tz=timezone(config('CELERY_TIMEZONE'))
+                        )
+                    )
                     cursor.execute(query)
                     connection.commit()
 

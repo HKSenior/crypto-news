@@ -103,14 +103,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = config('TIME_ZONE')
-
 USE_I18N = True
 
 USE_L10N = True
 
 USE_TZ = True
 
+TIME_ZONE = config('TIME_ZONE')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
@@ -133,7 +132,7 @@ CELERY_RESULT_BACKEND = 'db+' + config('DB_ENGINE') \
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = config('CELERY_RESULT_SERIALIZER')
 CELERY_TASK_SERIALIZER = config('CELERY_TASK_SERIALIZER')
-CELERY_TIMEZONE = config('CELERY_TIMEZONE')
+CELERY_TIMEZONE = config('TIME_ZONE')
 CELERY_BEAT_SCHEDULE = {
     'update_news': {
         'task': 'news.tasks.update_news',

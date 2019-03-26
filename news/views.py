@@ -11,5 +11,4 @@ def news(request):
         'news': list(records)
     }
 
-    print(context)
     return render(request, 'pages/news.html', context)

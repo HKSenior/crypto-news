@@ -1,5 +1,5 @@
-# Crypto Currency News Site
-### Home Page
+<h2 align="center">Crypto Currency News Site</h2>
+
 ![Home Page](https://i.imgur.com/DMICJcQ.jpg)
 
 ## URL
@@ -9,7 +9,7 @@
 ## Creating Virtual Environment
 ```
 mkdir -p prj && cd prg
-git clone https://github.com/HKSenior/crypto-news.git
+git clone -b dashboard https://github.com/HKSenior/crypto-news.git
 virtualenv ./venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -57,11 +57,3 @@ python manage.py runserver
 - CELERY_TIMEZONE
 - CELERY_TASK_SERIALIZER
 - CELERY_RESULT_SERIALIZER
-
-## Future Upgrades
-- [X] Use Celery to auto update database with new articles
-- [ ] Add pagination to the home page news cards
-- [ ] Allow users to sort news cards by date on news page
-- [ ] Allow users to filter news cards by category
-- [X] Style news cards
-- [ ] Add charts to price page
